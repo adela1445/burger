@@ -1,0 +1,30 @@
+.body {
+  background-color: rgb(13, 79, 82);
+  color: rgb(67, 202, 168);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: medium;
+}
+#titleHead {
+  font-style: italic;
+  text-align: center;
+}
+#burgerPng {
+  border-style: dotted;
+  border-radius: 50%;
+  border-color: brown;
+  border-width: thick;
+  text-align: center;
+}
+ul {
+  font-size: medium;
+  width: 300px;
+  margin: 4px;
+  padding: 4px;
+  list-style: none;
+  border: black solid 3px;
+  background-color: rgb(109 160 162);
+  color: rgb(134 89 0);
+}
+#addingBr {
+  color: plum;
+}

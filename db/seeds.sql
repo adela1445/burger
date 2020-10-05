@@ -1,0 +1,1 @@
+INSERT INTO burgers(burger_name, devoured) VALUES ("Vegan", false), ("Turkey", false), ("Veggie", false), ("Cheeseburger", true)

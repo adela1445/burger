@@ -1,0 +1,35 @@
+{
+  "name": "eatdaburger",
+  "version": "1.0.0",
+  "description": "An app that allows you to add burgers and show if you want to reorder or eat it",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.3.3",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adela1445/EatDaBurger.git"
+  },
+  "keywords": [
+    "mysql",
+    "express",
+    "express-handlebars",
+    "full-stack"
+  ],
+  "author": "Stephany A Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adela1445/EatDaBurger/issues"
+  },
+  "homepage": "https://github.com/adela1445/EatDaBurger#readme"
+}

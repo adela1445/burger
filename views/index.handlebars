@@ -1,0 +1,55 @@
+<div class="container">
+    <div>
+        <img id="burgerPng" src="/assets/img/kawaiiBurger.png" alt="Cute burger" width="180" height="180">
+        <h1 id="titleHead">Eat Da Brrrrgrrrs!</h1>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2><strong>Brrrrgrrrs that are not devoured!</strong> </h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h2><strong>Brrrrgrrrs that are devoured!</strong></h2>
+
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2 class="row"><strong>Add a Yum-yum Brrrrgrrr!</strong></h2>
+        <form id="addingBr" class="create-form">
+
+            <div class="form-group">
+                <label for="br">Brrrrgrrr name:</label>
+                <input type="text" id="br" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="devoured">Devoured?
+                </label><br>
+                <input type="radio" name="devoured" value="1" checked> Devoured!
+                <br>
+                <input type="radio" name="devoured" value="0"> Eat me!
+            </div>
+
+            <button type="submit">Add Brrrrgrrr</button>
+        </form>
+    </div>
+
+</div>
