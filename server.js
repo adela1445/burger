@@ -1,6 +1,6 @@
 const express = require("express");
 const methodOverride = require("method-override");
-
+require("dotenv").config();
 const PORT = process.env.PORT || 8780;
 
 const app = express();
