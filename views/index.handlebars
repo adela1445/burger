@@ -1,54 +1,69 @@
-<div class="container">
-    <div>
-        <img id="burgerPng" src="/assets/img/kawaiiBurger.png" alt="Cute burger" width="180" height="180">
-        <h1 id="titleHead">Eat Da Brrrrgrrrs!</h1>
-
-    </div>
+<div class="container-fluid">
 
     <div class="row">
-        <div class="col-md-6">
-            <h2><strong>Brrrrgrrrs that are not devoured!</strong> </h2>
-            <ul>
-                {{#each burgers}}
-                {{#unless devoured}}
-                {{> burgers/burger-block devoured=true}}
-                {{/unless}}
-                {{/each}}
-            </ul>
-        </div>
+        <img id="burgerPng" src="/assets/img/kawaiiBurger.png" alt="Cute Burger">
 
-        <div class="col-md-6">
-            <h2><strong>Brrrrgrrrs that are devoured!</strong></h2>
-
-            <ul>
-                {{#each burgers}}
-                {{#if devoured}}
-                {{> burgers/burger-block devoured=false}}
-                {{/if}}
-                {{/each}}
-            </ul>
+        <div class="col-8 titleHead" style="text-align: center">
+            <h1 class="eatBurger">Eat-Da-Burger</h1>
+            <div class="col-12">
+            </div>
         </div>
     </div>
+    <br>
+</div>
+<div class="container-fluid">
 
+    <div class="row">
 
-    <div class="container">
-        <h2 class="row"><strong>Add a Yum-yum Brrrrgrrr!</strong></h2>
-        <form id="addingBr" class="create-form">
+        <!-- this column holds the burger names on the left -->
+        <div class="col-6">
+            <h3 id="readyBurgers" style="text-align: center">
+                Ready To Be Devoured
+            </h3>
+            <div class="col-md-4 burgersListLefty">
 
-            <div class="form-group">
-                <label for="br">Brrrrgrrr name:</label>
-                <input type="text" id="br" name="name">
+                <ol class="">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-block devour=true}}
+                    {{/unless}}
+                    {{/each}}
+                </ol>
             </div>
+        </div>
+        <!-- DEVOURED BURGERS ON THE RIGHT SIDE -->
 
-            <div class="form-group">
-                <label for="devoured">Devoured?
-                </label><br>
-                <br>
-                <input type="radio" name="devoured" value="0"> Eat me!
+        <div class="col-6">
+            <h3 id="devBurgers" style="text-align: center">
+                Devoured Burgers
+            </h3>
+            <div class="col-md-4 burgersListRighty ">
+                <ol class="">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-block devour=false}}
+                    {{/if}}
+                    {{/each}}
+                </ol>
             </div>
+        </div>
 
-            <button type="submit">Add Brrrrgrrr</button>
-        </form>
     </div>
-
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div style="text-align: center">
+                <form class="form">
+                    <textarea type="text-area" id="burgerName" rows="8" cols="38" style="text-align: center">
+Enter name of burger here</textarea>
+                    <br />
+                    <input id="addingBr" type="submit" value="Submit" />
+                </form>
+            </div>
+            <p style="text-align: center">
+                Press submit, to create the new burger!
+            </p>
+        </div>
+    </div>
 </div>

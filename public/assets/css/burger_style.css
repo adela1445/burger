@@ -7,6 +7,8 @@
 #titleHead {
   font-style: italic;
   text-align: center;
+  padding-top: 5pc;
+  font-family: cursive;
 }
 #burgerPng {
   border-style: dotted;
@@ -14,16 +16,28 @@
   border-color: brown;
   border-width: thick;
   text-align: center;
+  width: 270px;
+  height: 270px;
 }
-ul {
+.burgersListLefty {
   font-size: medium;
   width: 300px;
   margin: 4px;
   padding: 4px;
-  list-style: none;
   border: black solid 3px;
   background-color: rgb(109 160 162);
   color: rgb(134 89 0);
+  float: right;
+}
+.burgersListRighty {
+  font-size: medium;
+  width: 300px;
+  margin: 4px;
+  padding: 4px;
+  border: black solid 3px;
+  background-color: rgb(109 160 162);
+  color: rgb(134 89 0);
+  float: left;
 }
 #addingBr {
   color: plum;
